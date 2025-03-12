@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Boy的笔记
-subtitle: ''
+title: Lang笔记
+subtitle: 'FromFengfeng'
 description: ''
 keywords:
 author: FengFeng
 language: en
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://gaoshanwenfeng.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -90,7 +90,20 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
+  - ".nojekyll"
+  # 处理 'source/css/_typing.css'
+  - "css/_typing.css"
+  # 处理 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。
+  - "_css/*"
+  # 处理 'source/_css/' 中的任何文件和子目录下的任何文件。
+  - "_css/**/*"
 exclude:
+ # 不处理 'source/js/test.js'。
+  - "js/test.js"
+  # 不处理 'source/js/' 中的文件、但包括子目录下的所有目录和文件。
+  - "js/*"
+  # 不处理 'source/js/' 中的文件和子目录下的任何文件。
+  - "js/**/*"
 ignore:
 
 # Extensions
